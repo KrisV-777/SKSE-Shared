@@ -1,8 +1,11 @@
+// Code originally from DAV (https://github.com/Exit-9B/DynamicArmorVariants)
+// Licensed under the MIT License (https://opensource.org/licenses/MIT)
+// The code has been modified and adapted for general use
+
 #pragma once
 
 #include "RefMap.h"
 
-// stolen from DAV (https://github.com/Exit-9B/DynamicArmorVariants)
 namespace Conditions
 {
     class ConditionParser
@@ -10,8 +13,8 @@ namespace Conditions
       public:
         ConditionParser() = delete;
 
-        static RE::TESConditionItem* Parse(std::string_view a_text, const RefMap& a_refMap);
-        static std::shared_ptr<RE::TESCondition> ParseConditions(const std::vector<std::string>& a_rawConditions, const RefMap& a_refMap);
+        static RE::TESConditionItem* Parse(std::string_view a_text, const RefMap& a_refMap = {});
+        static std::shared_ptr<RE::TESCondition> ParseConditions(const std::vector<std::string>& a_rawConditions, const RefMap& a_refMap = {});
 
       private:
         union ConditionParam

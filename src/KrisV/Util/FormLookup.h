@@ -1,5 +1,9 @@
 #pragma once
 
+#include <string_view>
+#include <charconv>
+#include <string>
+
 namespace Util
 {
     static inline RE::FormID FormFromString(const std::string_view& a_string, int base)
