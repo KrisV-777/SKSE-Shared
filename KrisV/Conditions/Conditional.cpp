@@ -1,7 +1,7 @@
 #include "Conditional.h"
 
-#include "Util/Script.h"
-#include "Util/StringUtil.h"
+#include "KrisV/Script.h"
+#include "KrisV/Util/StringUtil.h"
 
 namespace Conditions
 {
